@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="568.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.updateAppointments">
+   <children>
+      <Label fx:id="appointmentLabel" layoutX="112.0" layoutY="20.0" text="Add Appointment">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <TextField fx:id="description" layoutX="147.0" layoutY="147.0" promptText="Description" />
+      <TextField fx:id="title" layoutX="147.0" layoutY="111.0" promptText="Title" />
+      <TextField fx:id="location" layoutX="147.0" layoutY="182.0" promptText="Location" />
+      <TextField fx:id="type" layoutX="147.0" layoutY="249.0" promptText="Type" />
+      <Button fx:id="cancel" layoutX="115.0" layoutY="518.0" mnemonicParsing="false" onAction="#onCancel" text="Cancel" />
+      <Button fx:id="addbutton" layoutX="262.0" layoutY="518.0" mnemonicParsing="false" onAction="#onAdd" text="Add" />
+      <Label layoutX="109.0" layoutY="116.0" text="Title" />
+      <Label layoutX="71.0" layoutY="152.0" text="Description" />
+      <Label layoutX="86.0" layoutY="187.0" text="Location" />
+      <Label layoutX="94.0" layoutY="221.0" text="Contact" />
+      <Label layoutX="113.0" layoutY="253.0" text="Type" />
+      <Label layoutX="39.0" layoutY="350.0" text="Appointment Date" />
+      <Label layoutX="86.0" layoutY="381.0" text="Start Time" />
+      <Label layoutX="74.0" layoutY="282.0" text="Customer ID" />
+      <Label layoutX="102.0" layoutY="317.0" text="User ID" />
+      <TextField fx:id="appointmentIDText" disable="true" editable="false" layoutX="147.0" layoutY="78.0" promptText="Appointment_ID" />
+      <Label layoutX="55.0" layoutY="82.0" text="Apointment ID" />
+      <DatePicker fx:id="date" layoutX="147.0" layoutY="346.0" onAction="#onDate" promptText="Date" />
+      <ComboBox fx:id="contactComboBox" layoutX="147.0" layoutY="217.0" onAction="#onContact" prefWidth="150.0" promptText="Contact" />
+      <ComboBox fx:id="startTime" layoutX="147.0" layoutY="377.0" onAction="#onStartTime" prefWidth="150.0" promptText="Start" />
+      <Label layoutX="90.0" layoutY="412.0" text="End Time" />
+      <ComboBox fx:id="endTimeComboBox" layoutX="147.0" layoutY="408.0" onAction="#onEndDate" prefWidth="150.0" promptText="End" />
+      <ComboBox fx:id="customerIDcombo" layoutX="147.0" layoutY="279.0" onAction="#onCustomerID" prefWidth="150.0" promptText="Customer Id" />
+      <ComboBox fx:id="userIDCombo" layoutX="147.0" layoutY="314.0" onAction="#onCombo" prefWidth="150.0" promptText="User Id" />
+      <Label layoutX="6.0" layoutY="443.0" text="Previous Appointment Start Time and Date." />
+      <Label layoutX="7.0" layoutY="481.0" text="Previous Appointment End Time and Date." />
+      <TextField fx:id="PreviousAppStart" disable="true" layoutX="234.0" layoutY="439.0" promptText="N/A" />
+      <TextField fx:id="PreviousAppEnd" disable="true" layoutX="234.0" layoutY="477.0" promptText="N/A" />
+   </children>
+</AnchorPane>

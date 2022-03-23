@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="500.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.updateCustomers">
+   <children>
+      <Label fx:id="customerLabel" layoutX="126.0" layoutY="14.0" text="Add Customer">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <TextField fx:id="customerID" disable="true" editable="false" layoutX="166.0" layoutY="70.0" promptText="Customer_Id" />
+      <TextField fx:id="customerName" layoutX="166.0" layoutY="103.0" promptText="Customer_Name" />
+      <TextField fx:id="CustomerAddress" layoutX="166.0" layoutY="134.0" promptText="Customer Address" />
+      <TextField fx:id="postalCode" layoutX="166.0" layoutY="165.0" promptText="Postal Code" />
+      <TextField fx:id="phoneNumberS" layoutX="166.0" layoutY="196.0" promptText="Phone Number" />
+      <TextField fx:id="createDate" disable="true" editable="false" layoutX="166.0" layoutY="229.0" promptText="Create_Date" />
+      <TextField fx:id="createdBy" disable="true" editable="false" layoutX="166.0" layoutY="262.0" promptText="Created_by" />
+      <TextField fx:id="lastUpdate" disable="true" editable="false" layoutX="166.0" layoutY="295.0" promptText="Last_update" />
+      <TextField fx:id="lastUpdatedBy" disable="true" editable="false" layoutX="166.0" layoutY="331.0" promptText="Last_Updated_By" />
+      <ComboBox fx:id="countryComboBox" layoutX="166.0" layoutY="363.0" onAction="#onCountry" prefWidth="150.0" promptText="Country" />
+      <Label layoutX="86.0" layoutY="74.0" text="Customer ID" />
+      <Label layoutX="66.0" layoutY="107.0" text="Customer Name" />
+      <Label layoutX="56.0" layoutY="138.0" text="Customer Address" />
+      <Label layoutX="88.0" layoutY="169.0" text="Postal Code" />
+      <Label layoutX="69.0" layoutY="200.0" text="Phone Number" />
+      <Label layoutX="88.0" layoutY="233.0" text="Create Date" />
+      <Label layoutX="95.0" layoutY="266.0" text="Created By" />
+      <Label layoutX="88.0" layoutY="299.0" text="Last Update" />
+      <Label layoutX="66.0" layoutY="335.0" text="Last Updated By" />
+      <Label layoutX="96.0" layoutY="367.0" text="Country" />
+      <Button fx:id="addButton" layoutX="279.0" layoutY="439.0" mnemonicParsing="false" onAction="#onAdd" text="Add" />
+      <Button fx:id="cancelButton" layoutX="166.0" layoutY="439.0" mnemonicParsing="false" onAction="#onCancel" text="Cancel" />
+      <ComboBox fx:id="divisionComboBox" layoutX="166.0" layoutY="394.0" onAction="#onDivision" prefWidth="150.0" promptText="Division" />
+      <Label layoutX="96.0" layoutY="398.0" text="Division" />
+   </children>
+</AnchorPane>
