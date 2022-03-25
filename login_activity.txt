@@ -1,2 +1,6 @@
-
-Login Attempt by USER: 'test' was successful at 2022-03-23 10:50:33 UTC time.
+Login Attempt by USER: 'test' was successful at 2022-03-25 12:31:34 UTC time.
+Login Attempt by USER: 'test' was successful at 2022-03-25 12:43:59 UTC time.
+Login Attempt by USER: 'test' was successful at 2022-03-25 13:38:25 UTC time.
+Login Attempt by USER: 'test' was successful at 2022-03-25 13:49:32 UTC time.
+Login Attempt by USER: 'test' failed at 2022-03-25 14:05:51 UTC time.
+Login Attempt by USER: 'test' was successful at 2022-03-25 14:05:55 UTC time.

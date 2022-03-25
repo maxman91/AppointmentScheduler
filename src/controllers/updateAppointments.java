@@ -100,7 +100,10 @@ public class updateAppointments implements Initializable  {
         String appointmentType = type.getText();
 
 
-        if (appointmentTitle.isEmpty() || appointmentDescription.isEmpty() || appointmentLocation.isEmpty() || appointmentType.isEmpty() || endTimeComboBox.getValue() ==null || date.getValue() == null || customerIDcombo.getValue() == null || userIDCombo.getValue() == null || contactComboBox.getValue() == null)  {
+        if (appointmentTitle.isEmpty() || appointmentDescription.isEmpty() || appointmentLocation.isEmpty()
+                || appointmentType.isEmpty() || endTimeComboBox.getValue() ==null || date.getValue() == null
+                || customerIDcombo.getValue() == null || userIDCombo.getValue() == null
+                || contactComboBox.getValue() == null)  {
                 throw new NumberFormatException();
         }
         String startTimeDB = startTime.getValue();
@@ -320,7 +323,7 @@ public class updateAppointments implements Initializable  {
             addbutton.setText("Update");
             appointmentIDText.setText(String.valueOf(selectedAppointment.getAppointmentID()));
             title.setText(selectedAppointment.getTitle());
-            description.setText(selectedAppointment.getTitle());
+            description.setText(selectedAppointment.getDescription());
             type.setText(selectedAppointment.getType());
             location.setText(selectedAppointment.getLocation());
             PreviousAppEnd.setText(selectedAppointment.getEndAMPM());

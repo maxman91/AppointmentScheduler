@@ -6,7 +6,7 @@ import java.sql.DriverManager;
 
 public abstract class JDBC {
 
-    private static final String Url = "jdbc" + ":mysql:" + "//localhost/" + "client_schedule" + "?connectionTimeZone = SERVER";
+    private static final String Url = "jdbc" + ":mysql:" + "//localhost/" + "client_schedule";
     private static final String userName = "sqlUser";
     private static String password = "Passw0rd!";
     public static Connection connection;
