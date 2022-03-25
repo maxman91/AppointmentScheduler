@@ -92,18 +92,28 @@ public class updateAppointments implements Initializable  {
 
     @FXML
     void onAdd(ActionEvent event) {
-        String ErrorMessage = "Make sure title, description, location, and type is filled. Also make sure user ID, customer ID and Contact is selected along with start, end time and date.";
+        String ErrorMessage = "M";
         try {
         String appointmentTitle = title.getText();
         String appointmentDescription = description.getText();
         String appointmentLocation = location.getText();
         String appointmentType = type.getText();
+            if (appointmentTitle.isEmpty() || appointmentDescription.isEmpty() || appointmentLocation.isEmpty()
+                    || appointmentType.isEmpty())  {
+                ErrorMessage = "Make sure title, description, location and appointment type is filled.";
+                throw new NumberFormatException();
+            }
+
+            if (customerIDcombo.getValue() == null || userIDCombo.getValue() == null || contactComboBox.getValue() == null)  {
+                ErrorMessage = "Make sure Customer ID, User ID, And Contact is selected.";
+                throw new NumberFormatException();
+            }
 
 
-        if (appointmentTitle.isEmpty() || appointmentDescription.isEmpty() || appointmentLocation.isEmpty()
-                || appointmentType.isEmpty() || endTimeComboBox.getValue() ==null || date.getValue() == null
-                || customerIDcombo.getValue() == null || userIDCombo.getValue() == null
-                || contactComboBox.getValue() == null)  {
+
+
+        if (endTimeComboBox.getValue() ==null || date.getValue() == null)  {
+            ErrorMessage = "Make sure Date, start time, and end time is selected.";
                 throw new NumberFormatException();
         }
         String startTimeDB = startTime.getValue();

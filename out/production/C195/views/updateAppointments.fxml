@@ -32,7 +32,7 @@
       <Label layoutX="102.0" layoutY="317.0" text="User ID" />
       <TextField fx:id="appointmentIDText" disable="true" editable="false" layoutX="147.0" layoutY="78.0" promptText="Appointment_ID" />
       <Label layoutX="55.0" layoutY="82.0" text="Apointment ID" />
-      <DatePicker fx:id="date" layoutX="147.0" layoutY="346.0" onAction="#onDate" promptText="Date" />
+      <DatePicker fx:id="date" editable="false" layoutX="147.0" layoutY="346.0" onAction="#onDate" prefHeight="25.0" prefWidth="184.0" promptText="Use calender to input date" />
       <ComboBox fx:id="contactComboBox" layoutX="147.0" layoutY="217.0" onAction="#onContact" prefWidth="150.0" promptText="Contact" />
       <ComboBox fx:id="startTime" layoutX="147.0" layoutY="377.0" onAction="#onStartTime" prefWidth="150.0" promptText="Start" />
       <Label layoutX="90.0" layoutY="412.0" text="End Time" />
