@@ -1,5 +1,6 @@
 package controllers;
 
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -69,8 +70,6 @@ public class login implements Initializable {
         String users = userName.getText();
         String pass = userPassword.getText();
         boolean check = false;
-
-
         int count = getAllUsers().size();
         for (int i = 0; i < count; i++) {
            if (getAllUsers().get(i).getUsername().equals(users) && getAllUsers().get(i).getUserPassword().equals(pass)) {
@@ -78,28 +77,20 @@ public class login implements Initializable {
                 String currentUserName = getAllUsers().get(i).getUsername();
                 String currentPassword = getAllUsers().get(i).getUserPassword();
                addCurrentUser(new user(currentUserID, currentUserName, currentPassword));
-
                int UserId = getCurrentUser().get(0).getUserID();
+               System.out.println(assertNotNull(getCurrentUser()));
                AtomicReference<String> Message = new AtomicReference<>("You have no appointments coming up in the next 15 minutes.");
                getAllAppointments().forEach((n)-> {          //lambda expression
                    if (n.getUserID() == UserId){
                        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
                        LocalDateTime dateTime = LocalDateTime.parse(n.getLocalStart(), formatter);
-
-
-
                        int minutes = Math.toIntExact(ChronoUnit.MINUTES.between(LocalDateTime.now(), dateTime));
-                       System.out.println(minutes);
-
-
                        if (minutes >= 0 && minutes < 15){
                            Message.set("Appointment number "+ n.getAppointmentID()+", scheduled to start on "+n.getLocalStart()+" is coming up in less than 15 minutes.");
                        }
 
                         }
-
-
-                       });
+               });
                Alert alert = new Alert(Alert.AlertType.INFORMATION);
                alert.setHeaderText("Upcoming Appointments");
                alert.setContentText(Message.get());
@@ -141,6 +132,15 @@ public class login implements Initializable {
         alert.setHeaderText(Error);
         alert.showAndWait();}
 
+    }
+
+    private boolean assertNotNull(ObservableList<user> userNow) {
+        if (userNow.isEmpty()){
+            return false;
+        }
+        else {
+            return true;
+        }
     }
 
     /**This is the initialize method for the login class.
